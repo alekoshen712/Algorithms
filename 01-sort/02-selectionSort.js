@@ -12,11 +12,11 @@ function selectionSort(arr) {
 
 // 优化选择排序
 function selectionSortAdvance(arr) {
-  let left = 0,
-    right = arr.length - 1;
+  let left = 0;
+  let right = arr.length - 1;
   while (left < right) {
-    let minIdx = left,
-      maxIdx = right;
+    let minIdx = left;
+    let maxIdx = right;
     if (arr[minIdx] > arr[maxIdx]) swap(arr, minIdx, maxIdx);
     for (let i = left + 1; i < right; i++) {
       if (arr[i] < arr[minIdx]) minIdx = i;

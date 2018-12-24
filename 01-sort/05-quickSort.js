@@ -3,8 +3,8 @@ import { swap, generateRandomInt } from "../until";
 function _partition(arr, left, right) {
   // 随机化,否则如果为近乎有序的数组会退化为O(n^2)的算法
   swap(arr, left, generateRandomInt(left, right));
-  let v = arr[left],
-    j = left;
+  let v = arr[left];
+  let j = left;
   for (let i = left + 1; i <= right; i++) {
     if (arr[i] < v) {
       swap(arr, j + 1, i);
@@ -19,8 +19,8 @@ function _partition(arr, left, right) {
 function _partition2(arr, left, right) {
   swap(arr, left, generateRandomInt(left, right));
   let v = arr[left];
-  let i = left + 1,
-    j = right;
+  let i = left + 1;
+  let j = right;
   while (true) {
     while (i <= right && arr[i] < v) i++;
     while (j >= left + 1 && arr[j] > v) j--;

@@ -187,29 +187,3 @@ class binarySearchTree {
     return node;
   }
 }
-
-let n = new binarySearchTree();
-// debugger;
-n.put(8, 5);
-n.put(4, 15);
-n.put(18, 3);
-n.put(1, 321);
-n.put(6, 13);
-n.put(9, 31);
-n.put(20, 4);
-// console.log(n.size());
-// console.log(n.get(7));
-// console.log(n.min());
-// console.log(n.max());
-// console.log(n.floor(5));
-// console.log(n.ceiling(5));
-// console.log(n.select(1));
-// console.log(n.rank(1));
-// n.removeMin();
-// n.removeMax();
-// console.log(n.min());
-// console.log(n.max());
-// n.remove(6)
-n.inOrder(function(node) {
-  console.log(node.value);
-});

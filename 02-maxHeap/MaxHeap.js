@@ -3,7 +3,7 @@ import { swap } from "../until";
 class MaxHeap {
   data = [];
 
-  constructor() {
+  constructor(arr) {
     if (Array.isArray(arr)) this.heapify(arr);
   }
 
@@ -61,10 +61,3 @@ class MaxHeap {
     return ret;
   }
 }
-
-let m = new MaxHeap([3, 4, 6, 1, 9, 2, 8]);
-let arr = [];
-while (!m.isEmpty()) {
-  arr.unshift(m.extractMax());
-}
-console.log(arr);
